@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "445590518142",
+    "firebase_url": "https://covoit-benin-default-rtdb.firebaseio.com",
+    "project_id": "covoit-benin",
+    "storage_bucket": "covoit-benin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445590518142:android:07cab68f2fc2ca18111b2f",
+        "android_client_info": {
+          "package_name": "com.example.covoit_benin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArLkafDvJtC6Y2EbbrCup3qi1DuPiagLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
