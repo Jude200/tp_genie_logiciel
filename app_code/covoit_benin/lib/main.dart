@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:covoit_benin/features/auth/register/register.dart';
-import 'package:covoit_benin/features/home/home.dart';
+import 'package:covoit_benin/features_/auth/views/auth.dart';
+import 'package:covoit_benin/features_/welcome/views/index.dart';
 import 'package:covoit_benin/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -16,10 +16,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   FirebaseFirestore.instance.settings =
-      const Settings(persistenceEnabled: true);
-  if (shouldUseFirestoreEmulator) {
-    FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
-  }
+      const Settings(persistenceEnabled: false);
+  // if (shouldUseFirestoreEmulator) {
+  //   FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
+  // }
   runApp(const MyApp());
 }
 
@@ -30,14 +30,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'CoVoit Bénin',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        fontFamily: 'Fredoka',
-        useMaterial3: true,
-      ),
-      home: const RegisterProvider(),
-    );
+        title: 'Mon Journal Intime',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            fontFamily: 'Fredoka',
+            useMaterial3: true),
+        home: const LoginProvider());
   }
 }
